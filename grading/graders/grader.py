@@ -145,7 +145,7 @@ class Grader:
                             input_sep: str = ";", matr_id_col: str = "Matrikelnummer", study_id_col: str = "SKZ",
                             output_sep: str = ";", header: bool = False, grading_file: str = None,
                             grade_col: str = "grade", grade_reason_col: str = "grade_reason",
-                            cols_to_export: Sequence = None, input_encoding: str = "ANSI",
+                            cols_to_export: Sequence = None, input_encoding: str = "utf-8",
                             output_encoding: str = "utf8") -> tuple[pd.DataFrame, str]:
         """
         Creates a grading CSV file that can be uploaded to KUSSS based on the CSV input
