@@ -23,8 +23,7 @@ class Handson1LectureGrader(Grader):
             points = e2
         else:
             assert not np.isnan(e1)
-            # +(2.5 / 3) points due to misleading answer in one question
-            points = e1 + (2.5 / 3)
+            points = e1
         return util.create_grade(points, MAX_POINTS)
 
 
@@ -35,4 +34,7 @@ if __name__ == "__main__":
     gdf, gf = grader.create_grading_file(args.kusss_participants_files, grading_file=args.grading_file,
                                          row_filter=lambda row: (~row[grader.quiz_cols].isna()).any(),
                                          warn_if_not_found_in_kusss_participants=True)
+
+
+
     gdf.to_csv(gf.replace(".csv", "_FULL.csv"), index=False)

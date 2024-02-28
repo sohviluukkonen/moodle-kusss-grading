@@ -7,6 +7,6 @@ echo $files
 
 # Loop through each file and execute the python command
 for file in $files; do
-    python handson1exercisegrader.py -mf handson1_moodle.csv -kpf "$file"
+    python handson1exercisegrader.py -mf handson1moodle.csv -kpf "$file"
     echo
 done
