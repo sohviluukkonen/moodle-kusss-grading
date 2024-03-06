@@ -76,7 +76,8 @@ class Python1ExerciseGrader(Grader):
         if not np.isnan(e3):
             e_points = e3
         elif not np.isnan(e2):
-            e_points = e2
+            # +(2.5 / 3) points due to misleading answer in one question
+            e_points = e2 + (2.5 / 3)
         elif not np.isnan(e1):
             # +(2.5 / 3) points due to misleading answer in one question
             e_points = e1 + (2.5 / 3)
